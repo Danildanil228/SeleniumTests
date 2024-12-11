@@ -32,11 +32,10 @@ namespace SeleniumTests
         [Test]
         public void TestButtonClick()
         {
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));  // Увеличьте до 30 секунд
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
 
             IWebElement button = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id=\"login\"]")));
             button.Click();
-            // Добавьте ассерты для проверки ожидаемого результата
         }
 
         [Test]
